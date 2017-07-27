@@ -1,0 +1,8 @@
+averiguar:
+	generic DAO
+	rest/web service
+	jstl(core)
+	@one may
+	@many one
+	ABM de proyectos
+	Proyecto:{titulo, descripcion}

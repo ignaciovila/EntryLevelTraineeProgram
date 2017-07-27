@@ -1,0 +1,12 @@
+<script type="text/javascript">
+	$(function () {
+			$.getJSON("autos.jsp", function(data){
+				var marcas = $.parseJSON(data);
+				for ( var mar in marcas) 
+				{
+					$select.append('<option value=' + mar.nombre + '>' + mar.nombre + '</option>');
+				};
+			});
+	});
+</script>
+<select id="marca"></select>

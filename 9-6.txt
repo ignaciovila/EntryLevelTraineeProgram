@@ -1,0 +1,5 @@
+REPASAR
+	- JSON
+	- $.getJSON
+	- JUnit y Selenium
+	- bootbox js para confirmar eliminación (jquery delegate)

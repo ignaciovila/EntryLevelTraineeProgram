@@ -1,0 +1,13 @@
+@CHARSET "ISO-8859-1";
+
+.titulo {
+	color: blue;
+}
+
+#vin {
+	color: red;
+}
+
+h1 {
+	font-size: 36;
+}

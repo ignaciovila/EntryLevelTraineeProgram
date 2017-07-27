@@ -1,0 +1,88 @@
+-- ORM, en particular HIBERNATE
+
+	ORM: técnica de programción que permite trabajar con bases de datos relacionales usando las características de la POO, a través de una base de datos orientada a objetos virtual. Es decir que el programador puede crear objetos que requieren el uso de varias tablas sin preocuparse por la forma de inserción, modificación y borrado particular del motor de base de datos que esté usando.
+
+	https://es.wikipedia.org/wiki/Mapeo_objeto-relacional
+
+	Hibernate: implementación de ORM para Java y .NET con NHibernate.
+
+	https://es.wikipedia.org/wiki/Hibernate
+
+-- BUILDER
+
+	Patrón de diseño de tipo creacional.
+	Permite la creación de objetos complejos sin necesidad de crear los objetos más simples que lo conforman. Trabaja mediante interfaces que implementan todas la interfaz Abstract Builder.
+
+	Objetivo: abstrae el proceso de creación de un objeto complejo, centralizando dicho proceso en un único punto, de tal forma que el mismo proceso de construcción pueda crear representaciones diferentes.
+
+	En código se traduce a una clase Builder que tiene un método construir que recibe como parámetro qué se quiere crear sin ningúna condición sobre cómo hacerlo.
+
+	https://es.wikipedia.org/wiki/Builder_(patr%C3%B3n_de_dise%C3%B1o)
+
+	-- FACADE
+
+	Patrón de diseño de tipo estructural.
+	Permite enmascarar la complejidad del sistema. Sirve para mostrar una interfaz más simple, separar en capas y reutilización de codigo.
+
+	https://es.wikipedia.org/wiki/Facade_(patr%C3%B3n_de_dise%C3%B1o)
+
+-- STRATEGY
+
+	Patrón de diseño de tipo comportamental.
+	Determina cómo se debe realizar el intercambio de mensajes entre diferentes objetos para resolver una tarea.
+
+	Se compone de tres elementos:
+
+	Context:
+	Determina en cada caso qué estrategia usar.
+
+	Strategy:
+	Determina, a través de una interfaz, la lógica común para todas las estrategias.
+
+	ConcreteStrategy:
+	Implementa la estrategia según las particularidades del caso.
+
+	https://es.wikipedia.org/wiki/Strategy_(patr%C3%B3n_de_dise%C3%B1o)
+
+-- DAO
+	Establece que se debe aislar la comunicación a la base de datos con el resto de la aplicación.
+	Dentro del modelo MVC, la clase DAO permite la comunicación entre el Controlador y la base de datos.
+	https://es.wikipedia.org/wiki/Data_Access_Object
+
+-- MVC
+	Patrón de arquitectura.
+	Separa la interfaz de usuario, la lógica de negocio, el encargado de gestionar los eventos y las comunicaciones entre clases y el acceso a datos.
+	Favorece reutilización de código y separación de conceptos para facilitar el desarrollo y el mantenimiento.
+	https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
+
+-- FACTORY
+	Patrón creacional.
+	Se utiliza para crear objetos sin especificar la clase exacta a la que pertenece. La creación se realiza a través de un método "factory" en lugar del constructor. Pasando por parámetro los campos clave para su creación.
+	https://es.wikipedia.org/wiki/Factory_Method_(patr%C3%B3n_de_dise%C3%B1o)
+
+-- PROTOTYPE
+	Creacional.
+	Se utiliza para crear múltiples objetos a partir de uno ya creado, clonandolo. Es más barato en memoria que crear un objeto nuevo.
+	https://es.wikipedia.org/wiki/Prototype_(patr%C3%B3n_de_dise%C3%B1o)
+
+-- SOLID (sin programación)
+	S:
+	Principio de responsabilidad única. Un objeto solo debería tener una única responsibilidad.
+	O:
+	Principio de abierto/cerrado. Abierto para extensión, cerrado para modificación.
+	L:
+	Principio de sustitución de Liskov. Los objetos deberían poder ser reemplazados por instancias de sus subtipos sin alterar el funcionamiento del programa.
+	I:
+	Principio de separación de interfaces. Muchas interfaces para un propósito específico son mejores que una única interfaz para muchos propósitos.
+	D:
+	Principio de inversión de la dependencia. Se debe depender de abstracciones y no de implementaciones.
+
+	https://es.wikipedia.org/wiki/SOLID
+
+-- INYECCIÓN DE DEPENDENCIAS
+	Patrón creacional que establece que los objetos de una clase deben crearse fuera de ella. Entonces el cliente pide un objeto (dependencia) a un servicio que lo devuelve (inyecta).
+
+PROXY
+STATE
+OBSERVER
+MEDIATOR

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Bootstrap!</title>
+
+<!-- MENOR PRIORIDAD -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- MAYOR PRIORIDAD -->
+<link href="css/general.css" rel="stylesheet">
+
+<script type="text/javascript">
+		function operar(num1, num2, operacion){
+			switch(operacion){
+			case "suma":
+				return parseFloat(num1) + parseFloat(num2);
+			case "resta":
+				return parseFloat(num1) - parseFloat(num2);
+			case "multiplicacion":
+				return parseFloat(num1) * parseFloat(num2);
+			case "division":
+				 return parseFloat(num1) / parseFloat(num2);
+			}
+
+		}
+		function eventoClick(){
+			var num1 = document.getElementById('numero1');
+			var num2 = document.getElementById('numero2');
+			var operacion = document.getElementById('operacion');
+			var total = operar(num1.value, num2.value, operacion.options[operacion.selectedIndex].value);
+			var operaciones = document.getElementById('operaciones');
+			operaciones.innerHTML = total;
+		}
+</script>
+</head>
+
+<body>
+	<div class="container">
+		Numero 1: <input type="number" id="numero1"><br>
+		Numero 2: <input type="number" id="numero2"><br>
+		Operación: <select id="operacion">
+					<option value="suma">SUMAR</option>
+					<option value="resta">RESTAR</option>
+					<option value="multiplicacion">MULTIPLICAR</option>
+					<option value="division">DIVIDIR</option>
+					</select>
+		<button onclick = "eventoClick()">OK</button><br>
+		Total: <div id="operaciones"></div>
+	</div>
+	<!-- /.container -->
+
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>

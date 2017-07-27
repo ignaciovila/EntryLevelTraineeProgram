@@ -1,0 +1,14 @@
+HACER CURSO DE GIT DE CODEACADEMY
+comandos:
+		- clone
+		- init
+		- commit
+		- add
+		- push
+		- pull
+		- checkout
+		- merge
+		- rebase
+INVESTIGAR ORIGIN Y MASTER BRANCH
+
+LISTAR Y ABM DE TAREAS

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JSON + JS</title>
+<script type="text/javascript">
+	/* 	var persona = {
+	 "nombre" : "juan",
+	 "edad" : 45,
+	 "saludar" : function(texto){
+	 alert('Hola a todos: ' + texto);
+	 }
+	 };
+	 alert(persona.nombre);
+	 persona.saludar('funciona?');
+	 
+	var personas = [ {
+		"nombre" : "juan",
+		"edad" : 45
+	}, {
+		"nombre" : "carlos",
+		"edad" : 50
+	}, {
+		"nombre" : "pedro",
+		"edad" : 32
+	} ];
+
+	for (var x = 0; x < personas.length; x++) {
+		var p = personas[x];
+		$('#contenido').html(p.nombre + ', ' + p.edad);
+	}
+	*/
+	function Persona(nombre, edad) {
+		// this.nombre = nombre;
+		// this.edad = edad;
+		this.saludar = function() {
+			alert("Hola a todos!")
+		};
+	}
+	
+	var p1 = new Persona();
+	p1.nombre = "Juan";
+	p1.edad = 34;	
+	alert(p1.nombre);
+	p1.saludar();
+	
+</script>
+</head>
+<body>
+	<div id="contenido"></div>
+</body>
+</html>

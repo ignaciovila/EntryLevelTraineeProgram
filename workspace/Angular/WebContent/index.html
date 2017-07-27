@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="holaMundoApp">
+  <head>
+	<script src="js/angular.js"></script>
+    <script src="js/hola_mundo_controller.js"></script>
+  </head>
+  <body>
+    <h2>Hola Mundo</h2>
+    <div ng-controller="HolaMundoController">
+	  <table>
+		<tr ng-repeat="persona in personas">
+			<td>{{persona.nombre}}</td>
+			<td>{{persona.apellido}}</td>
+        </tr>
+	  </table>
+	  
+	  <form ng-submit="agregarPersonaForm()">
+        <input type="text" ng-model="nombre"  size="30" placeholder="Nombre">
+		<input type="text" ng-model="apellido"  size="30" placeholder="Apellido">
+        <input type="submit" value="Agregar">
+      </form>
+	  
+	  
+    </div>
+  </body>
+</html>

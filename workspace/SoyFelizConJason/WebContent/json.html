@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JSON</title>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#boton').click(function() {
+			$.getJSON('respuestajson.jsp', function(persona){
+				$('#todoVaAqui').html(persona.nombre + ', ' + persona.edad + '<br>' + persona.es_casado);
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<input type="button" id="boton" value="JSON">
+<div id="todoVaAqui"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JQuery UI</title>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script>
+	$(function() {
+		$('#campoFecha').datepicker({
+			changeMonth : true,
+			changeYear : true,
+			showWeek : true,
+			firstDay : 1,
+			minDate : 0,
+			dateFormat : 'dd-mm-yy'
+		});
+		var availableTags = [ "ActionScript", "AppleScript", "Asp", "BASIC",
+				"C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang",
+				"Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp",
+				"Perl", "PHP", "Python", "Ruby", "Scala", "Scheme" ];
+		$("#tags").autocomplete({
+			source : availableTags
+		});
+	});
+</script>
+</head>
+<body>
+	<label for="campoFecha">Fecha</label>
+	<input type="text" id="campoFecha" name="miCampoFecha">
+	<label for="tags">Lenguajes</label>
+	<input id="tags">
+</body>
+</html>

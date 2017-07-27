@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(
+		function(){
+			$('#clarin').click(
+				function(event){
+					$('#divTexto').html("Hola");
+				});
+	});
+	
+	function() {
+		$('#miForm').validate();
+	}
+	function ocultar() {
+		$('#miForm').toggle('slow');
+	}
+</script>
+</head>
+<body>
+	<form id="miForm">
+		Nombre:<input type="text" name="campoNombre" class="required">
+		Email:<input type="email" name="campoEmail" class="required">
+		<input type="submit" value="Enviar">
+	</form>
+	<input id="ocultar" type="button" onclick="ocultar()"
+		value="Mostrar/Ocultar">
+	<div id="divTexto"></div>
+	<a id="clarin" href="http://www.clarin.com">Yo les pido que lean el
+		clarín</a>
+</body>
+</html>

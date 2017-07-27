@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Ejercicio Front End</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/handlebars-v4.0.5.js"></script>
+<script id="template" type="text/x-handlebars-template">
+        <tr>
+          	<td>{{numero}}</td>
+          	<td>{{producto}}</td>
+          	<td>{{precio}}</td>
+          	<td>{{cantidad}}</td>
+			<td>{{subtotal}}</td>
+			<td><button class="btn btn-primary borrar">Borrar</button>		
+       </tr>
+</script>
+</head>
+<body>
+	<div class="container">
+		<div id="divFormulario" class="col-md-4">
+			<div class="form-group">
+				<label for="numero">Numero:</label> <input type="number" id="numero"
+					required="required">
+			</div>
+			<div class="form-group">
+				<label for="producto">Producto:</label> <input type="text"
+					id="producto" required="required">
+			</div>
+			<div class="form-group">
+				<label for="precio">Precio:</label> <input type="number" id="precio"
+					required="required">
+			</div>
+			<div class="form-group">
+				<label for="cantidad">Cantidad:</label> <input type="number"
+					id="cantidad" required="required" width="">
+			</div>
+			<button id="agregar" class="btn btn-primary">Agregar</button>
+		</div>
+		<div id="divTabla" class="table-responsive">
+			<table id="tabla" class="table">
+				<thead>
+					<tr>
+						<th>NUMERO</th>
+						<th>PRODUCTO</th>
+						<th>PRECIO</th>
+						<th>CANTIDAD</th>
+						<th>SUBTOTAL</th>
+						<th></th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$('#agregar').click(function() {
+			//$('#formulario').validate();
+			var p = {
+				"numero" : parseInt($('#numero').val()),
+				"producto" : $('#producto').val(),
+				"precio" : parseInt($('#precio').val()),
+				"cantidad" : parseInt($('#cantidad').val()),
+				"subtotal" : 0
+			};
+			p.subtotal = p.precio * p.cantidad;
+			var source = $("#template").html();
+			var template = Handlebars.compile(source);
+			$('#tabla').append(template(p));
+		});
+		$(function borrar() {
+			$("#tabla").delegate(".borrar", "click", function() {
+				$(this).parent().parent().remove();
+			});
+		});
+	</script>
+</body>
+</html>

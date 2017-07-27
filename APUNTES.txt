@@ -1,0 +1,47 @@
+índices: permiten mejorar la velocidad de consulta. tiene que ser reordenado cada vez que agrego algo nuevo o borro.
+		simples: puede haber repetidos
+		primary: sin repetidos, mayor prioridad
+		unique: sin repetidos
+		full text search: para búsquedas en texto largos
+		spacial: georeferncial
+
+
+transactions
+ACID
+- atomicidad, se ejecutan todas o ninguna. no usa valores que no estén dentro del método, las conecciones a bases de datos se abren y cierran cada vez,
+los archivos se bloquean para que nadie más pueda acceder.
+- consistente, los datos siempre quedan completos
+- aislamiento, una operación no puede afectar a otras
+- durabilidad, persistencia
+
+	START TRANSACTION;
+	ROLLBACK; Ó COMMIT;
+	
+- JAVA
+boxing y unboxing
+regular expressions
+hashchode: identificador único de un objeto, es útil para comparar más rápido.
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+hashset y como recorrerlo
+hashmap
+collections: interfaz que obliga a implementar agrego/quito/recorro/cuento
+	hijos
+		- list: tienen posición definida, admite duplicados
+		- set: almacena sin posición, no permite duplicados
+			- sorted set: ídem pero ordenado
+map: par clave/dato. la clave puede ser cualquier tipo de dato. es más rápido porque permite trabajar solamente con el key (contar, verificar si existe, etc)
+	-sorted map: igual pero ordenado
+generics y su relacion con arraylist y hashset
+annotation
+metodos de la clase Object
+
+LinkedList: funcionamiento en el back similar a una lista, con nodos y punteros.
+ArrayList: funcionamiento en el back similar a un vector, con índices.

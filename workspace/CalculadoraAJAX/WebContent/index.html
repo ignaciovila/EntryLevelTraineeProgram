@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Bootstrap!</title>
+
+<!-- MENOR PRIORIDAD -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- MAYOR PRIORIDAD -->
+<link href="css/general.css" rel="stylesheet">
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#boton').click(function() {
+			var datosForm = $('#datosForm').serialize();
+			$.get('calcular.jsp', datosForm, function(response) {
+				$('#resultados').html(response);
+			});
+		});
+	});
+</script>
+</head>
+
+<body>
+	<div class="container">
+		<form id="datosForm">
+			<label>Numero 1:</label> <input type="number" name="numero1"
+				class="form-control"> <label>Numero 2:</label> <input
+				type="number" name="numero2" class="form-control"> <label>Operación:</label>
+			<select class="form-control" name="operacion">
+				<option value="suma">SUMAR</option>
+				<option value="resta">RESTAR</option>
+				<option value="multiplicacion">MULTIPLICAR</option>
+				<option value="division">DIVIDIR</option>
+			</select>
+			<button id="boton" type="button">OK</button>
+		</form>
+		<div id="resultados"></div>
+	</div>
+</body>
+</html>

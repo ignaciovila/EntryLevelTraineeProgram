@@ -1,0 +1,47 @@
+VARIOS
+http://www.getbootstrap.com
+VARIOS
+http://www.jqueryui.com
+TABLA
+http://www.datatables.net
+TABLA
+http://www.trirand.com/blog/jqgrid/jqgrid.html
+CALENDARIO
+http://www.fullcalendar.io
+MOSTRAR CUANDO APOYAS ARRIBA EL MOUSE
+http://qtip2.com
+GRAFICOS
+http://www.jqplot.com
+MANEJO DE DATOS
+http://www.chartjs.org
+CARROUSSEL DE FOTOS
+http://kenwheeler.github.io/slick
+IMAGENES
+http://masonry.desandro.com
+FORMS
+http://malsup.com/jquery/form
+VALIDAR
+https://jqueryvalidation.org
+ENMASCARAR INPUT
+http://digitalbush.com/projects/masked-input-plugin
+EDITOR DE TEXTO
+http://ckeditor.com/demo
+ARBOL DE DEPENDENCIAS
+https://www.jstree.com/
+TOKEN DE VALIDACIÓN
+http://loopj.com/jquery-tokeninput
+GOOGLE MAPS (PEOR QUE LA API PERO MÁS RÁPIDO)
+http://gmap3.net/
+BOOTSTRAP PLUGINS
+http://bootstraphero.com/the-big-badass-list-of-twitter-bootstrap-resources
+VIDEO DE FONDO
+http://vodkabears.github.io/vide/
+SLIDEBARS
+https://www.adchsm.com/slidebars
+ANIMACIONES
+https://daneden.github.io/animate.css/
+
+https://lodash.com/
+
+CARGA EN FUNCION DEL DISPOSITIVO
+http://bttrlazyloading.julienrenaux.fr/

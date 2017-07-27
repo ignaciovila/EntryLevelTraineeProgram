@@ -1,0 +1,3 @@
+- investigar select con where, like, mayor, menor, in, between, wildcards, consultas y subconsultas, funciones de agregación (sum, count, min, max)
+- índices
+- group by
